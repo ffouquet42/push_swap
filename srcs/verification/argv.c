@@ -6,12 +6,11 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 02:31:50 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/03 02:39:19 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/03 02:56:23 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
 
 int	ft_is_digit(char c)
 {
@@ -36,9 +35,23 @@ int	ft_check_only_digit(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (ft_is_digit(str[i]))
+		if (ft_is_digit(str[i]) == 1)
 			return (1);
 		i++;
+	}
+	return (0);
+}
+
+int	ft_check_double(int argc, char **argv, int i)
+{
+	int	j;
+
+	j = i + 1;
+	while (j < argc)
+	{
+		if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
+			return (1);
+		j++;
 	}
 	return (0);
 }
@@ -50,7 +63,7 @@ int	ft_check_argv(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		if (ft_check_only_digit(argv[i]))
+		if (ft_check_only_digit(argv[i]) == 1 || ft_check_double(argc, argv, i) == 1)
 			return (1);
 		i++;
 	}

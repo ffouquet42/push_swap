@@ -1,7 +1,7 @@
 SRCS		=	srcs/push_swap.c								\
 				srcs/verification/argv.c						\
 				srcs/utils/print.c								\
-				srcs/utils/atoi.c								\
+				srcs/utils/tools.c								\
 
 OBJS		=	$(SRCS:.c=.o)
 
