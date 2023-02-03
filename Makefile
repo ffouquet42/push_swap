@@ -1,4 +1,5 @@
 SRCS		=	srcs/push_swap.c								\
+				srcs/verification/argv.c						\
 				srcs/utils/print.c								\
 				srcs/utils/atoi.c								\
 

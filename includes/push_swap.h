@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/03 02:11:29 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/03 02:41:05 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,20 @@ typedef struct s_data
 //--------------- push_swap.c ---------------//
 int		main(int argc, char **argv);
 
+//--------------- VERIFICATION ---------------//
+
+//--------------- argv.c ---------------//
+int		ft_is_digit(char c);
+int		ft_check_only_digit(char *str);
+int		ft_check_argv(int argc, char **argv);
+
+//--------------- UTILS ---------------//
+
+//--------------- atoi.c ---------------//
+int		ft_atoi(char *str);
+
 //--------------- print.c ---------------//
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
-
-//--------------- atoi.c ---------------//
-int	ft_atoi(char *str);
 
 #endif

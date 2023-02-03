@@ -6,24 +6,11 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:33 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/03 02:11:43 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/03 02:39:48 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-int	ft_check_argv_is_valid(int argc, char **argv)
-{
-	int	i;
-
-	i = 1;
-	while (i < argc)
-	{
-		printf("n : %i\n", ft_atoi(argv[i]));
-		i++;
-	}
-	return (0);
-}
 
 int	main(int argc, char **argv)
 {
@@ -31,8 +18,10 @@ int	main(int argc, char **argv)
 	
 	if (argc < 2)
 		return (1);
-	if (ft_check_argv_is_valid(argc, argv))
+	if (ft_check_argv(argc, argv))
 		return (ft_putstr("Error\n"), 1);
+	else
+		ft_putstr("Valid\n");
 	return (0);
 }
 
