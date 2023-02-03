@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:33 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/03 02:45:07 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/03 03:02:47 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,8 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-// verif si on a que des int valide et pas de doublons
-// ( si certains paramètres ne sont pas des nombres, ne tiennent pas dans un int, ou encore, s’il y a des doublons.)
-
-// coder les fonctions de tri
-
+// Verifier que ca tiens dans in int
 // Value of INT_MAX is +2147483647
 // Value of INT_MIN is -2147483648
+
+// Coder les fonctions de tri

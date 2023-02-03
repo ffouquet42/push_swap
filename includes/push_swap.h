@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/03 02:48:07 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/03 02:58:03 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int		main(int argc, char **argv);
 //--------------- argv.c ---------------//
 int		ft_is_digit(char c);
 int		ft_check_only_digit(char *str);
+int		ft_check_double(int argc, char **argv, int i);
 int		ft_check_argv(int argc, char **argv);
 
 //--------------- UTILS ---------------//
