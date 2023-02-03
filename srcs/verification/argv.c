@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 02:31:50 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/03 03:14:40 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/03 06:57:06 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	ft_check_only_digit(char *str)
 	int	i;
 
 	i = 0;
+	if (str[i] == '-')
+		i++;
 	while (str[i])
 	{
 		if (ft_is_digit(str[i]) == 1)
@@ -56,6 +58,31 @@ int	ft_check_double(int argc, char **argv, int i)
 	return (0);
 }
 
+int	ft_check_int_max_min(char *str)
+{
+	int		i;
+	long	res;
+	int		pos;
+
+	i = 0;
+	res = 0;
+	pos = 1;
+	if (str[i] == '-')
+	{
+		pos = -1;
+		i++;
+	}
+	while (str[i])
+	{
+		res = res * 10 + (str[i] - 48);
+		i++;
+	}
+	res = res * pos;
+	if (res > INT_MAX || res < INT_MIN)
+		return (1);
+	return (0);
+}
+
 int	ft_check_argv(int argc, char **argv)
 {
 	int	i;
@@ -63,7 +90,7 @@ int	ft_check_argv(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		if (ft_check_only_digit(argv[i]) == 1 || ft_check_double(argc, argv, i) == 1)
+		if (ft_check_only_digit(argv[i]) == 1 || ft_check_int_max_min(argv[i]) == 1 || ft_check_double(argc, argv, i) == 1)
 			return (1);
 		i++;
 	}
