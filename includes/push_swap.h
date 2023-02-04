@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/04 13:54:16 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/04 16:52:10 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@
 
 typedef struct s_stack
 {
-	int		value;
-	t_stack	*next;
-	// struct s_stack	*next;
+	int				value;
+	struct s_stack	*next;
 }	t_stack;
 
 //--------------- PROTOTYPES ---------------//
