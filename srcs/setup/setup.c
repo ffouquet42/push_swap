@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/05 13:32:18 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/05 14:47:08 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,31 @@ void	ft_stack_add_back(t_stack **stack, t_stack *new)
 	}
 }
 
+int	ft_is_sorted(t_stack *stack)
+{
+	while (stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}
+
+void	ft_algorithm_choice(t_stack *stack_a, int nb)
+{
+	if (nb == 2)
+		printf("nb : 2\n");
+	else if (nb == 3)
+		printf("nb : 3\n");
+	else if (nb == 4)
+		printf("nb : 4\n");
+	else if (nb == 5)
+		printf("nb : 5\n");
+	else if (nb >= 6)
+		printf("nb : 6+\n");
+}
+
 void	ft_setup(int argc, char **argv)
 {
 	t_stack *stack_a;
@@ -54,8 +79,10 @@ void	ft_setup(int argc, char **argv)
 		ft_stack_add_back(&stack_a, stack_tmp);
 		i++;
 	}
-	// check if it's already sorted
-	ft_display_stack(stack_a);
+	if (ft_is_sorted(stack_a) == 0);
+		ft_algorithm_choice(stack_a, argc - 1);
+
+	// ft_display_stack(stack_a); // dev
 }
 
 
