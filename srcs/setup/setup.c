@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/04 16:55:33 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/05 13:09:00 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,16 @@ t_stack	*ft_stack_new(int value)
 
 void	ft_stack_add_back(t_stack **stack, t_stack *new)
 {
-	t_stack	*ptr;
+	t_stack	*last;
 
 	if (*stack == NULL)
 		*stack = new;
 	else
 	{
-		ptr = *stack;
-		while (ptr->next)
-			ptr = ptr->next;
-		ptr->next = new;
+		last = *stack;
+		while (last->next != NULL)
+			last = last->next;
+		last->next = new;
 	}
 }
 
@@ -54,20 +54,18 @@ void	ft_setup(int argc, char **argv)
 		ft_stack_add_back(&stack_a, stack_tmp);
 		i++;
 	}
-	ft_display_stack(&stack_a);
+	ft_display_stack(stack_a);
 }
 
+
 // dev
-void	ft_display_stack(t_stack *stack)
+void	ft_display_stack(t_stack *stack_a)
 {
-    t_stack *stack_tmp;
-	
-	stack_tmp = stack;
 	printf("-----------------------------------\n");
-   	while (stack_tmp)
+   	while (stack_a)
 	{
-        printf("%i\n", stack_tmp->value);
-        stack_tmp = stack_tmp->next;
+        printf(" A : %i |  B : %i\n", stack_a->value, NULL);
+        stack_a = stack_a->next;
     }
 	printf("-----------------------------------\n");
 }
