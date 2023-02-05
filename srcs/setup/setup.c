@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/05 13:09:00 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/05 13:32:18 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	ft_setup(int argc, char **argv)
 		ft_stack_add_back(&stack_a, stack_tmp);
 		i++;
 	}
+	// check if it's already sorted
 	ft_display_stack(stack_a);
 }
 
@@ -64,7 +65,7 @@ void	ft_display_stack(t_stack *stack_a)
 	printf("-----------------------------------\n");
    	while (stack_a)
 	{
-        printf(" A : %i |  B : %i\n", stack_a->value, NULL);
+        printf(" A : %i |  B : %i\n", stack_a->value, 0);
         stack_a = stack_a->next;
     }
 	printf("-----------------------------------\n");
