@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/05 14:47:08 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/05 14:51:32 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,8 @@ void	ft_setup(int argc, char **argv)
 		ft_stack_add_back(&stack_a, stack_tmp);
 		i++;
 	}
-	if (ft_is_sorted(stack_a) == 0);
+	if (ft_is_sorted(stack_a) == 0)
 		ft_algorithm_choice(stack_a, argc - 1);
-
 	// ft_display_stack(stack_a); // dev
 }
 
