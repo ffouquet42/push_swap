@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 09:27:18 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 16:44:10 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/06 17:11:08 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,5 @@ void	swap_a_and_b(t_stack *stack_a, t_stack *stack_b)
 {
 	swap_a(stack_a, 0);
 	swap_b(stack_b, 0);
+	ft_putstr("ss\n");
 }

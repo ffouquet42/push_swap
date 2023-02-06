@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 09:27:25 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 16:42:26 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/06 17:10:54 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,5 @@ void	rotate_a_and_b(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate_a(stack_a, 0);
 	rotate_b(stack_b, 0);
+	ft_putstr("rr\n");
 }

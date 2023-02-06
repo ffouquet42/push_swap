@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 16:45:32 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/06 16:57:18 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_algorithm_choice(t_stack *stack_a, int nb)
 	else if (nb == 4)
 		printf("nb : 4\n");
 	else if (nb == 5)
-		printf("nb : 5\n");
+		printf("nb : 5\n"); // to do
 	else if (nb >= 6)
 		printf("nb : 6+\n");
 	ft_display_stack(stack_a); // dev
