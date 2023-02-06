@@ -2,7 +2,12 @@ SRCS		=	srcs/push_swap.c								\
 				srcs/verification/argv.c						\
 				srcs/utils/print.c								\
 				srcs/utils/tools.c								\
+				srcs/utils/stack_handling.c						\
 				srcs/setup/setup.c								\
+				srcs/instructions/push.c						\
+				srcs/instructions/reverse.c						\
+				srcs/instructions/rotate.c						\
+				srcs/instructions/swap.c						\
 
 OBJS		=	$(SRCS:.c=.o)
 

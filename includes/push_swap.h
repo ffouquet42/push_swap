@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/05 14:47:46 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/06 12:58:32 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ int		main(int argc, char **argv);
 //--------------- rotate.c ---------------//
 
 //--------------- swap.c ---------------//
+void	swap_a(t_stack *stack_a);
+void	swap_b(t_stack *stack_b);
+void	swap_a_and_b(t_stack *stack_a, t_stack *stack_b);
 
 //--------------- VERIFICATION ---------------//
 
@@ -70,5 +73,8 @@ int		ft_atoi(char *str);
 //--------------- print.c ---------------//
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
+
+//--------------- stack_handling.c ---------------//
+int		ft_stack_size(t_stack *stack);
 
 #endif
