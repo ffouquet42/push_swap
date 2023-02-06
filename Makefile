@@ -8,6 +8,7 @@ SRCS		=	srcs/push_swap.c								\
 				srcs/instructions/reverse.c						\
 				srcs/instructions/rotate.c						\
 				srcs/instructions/swap.c						\
+				srcs/algorithm/3_values.c						\
 
 OBJS		=	$(SRCS:.c=.o)
 

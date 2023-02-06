@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 12:58:32 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/06 13:56:50 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,12 @@ int		main(int argc, char **argv);
 //--------------- INSTRUCTIONS ---------------//
 
 //--------------- push.c ---------------//
+void	push_a(t_stack *stack_a, t_stack *stack_b);
+void	push_b(t_stack *stack_a, t_stack *stack_b);
 
 //--------------- reverse.c ---------------//
+void	reverse_rotate_a(t_stack **stack_a);
+void	reverse_rotate_b(t_stack **stack_b);
 
 //--------------- rotate.c ---------------//
 
@@ -76,5 +80,10 @@ void	ft_putstr(char *str);
 
 //--------------- stack_handling.c ---------------//
 int		ft_stack_size(t_stack *stack);
+
+//--------------- ALGORITHM ---------------//
+
+//--------------- 3_values.c ---------------//
+void	ft_sort_3_values(t_stack *stack_a, t_stack *stack_b);
 
 #endif
