@@ -6,13 +6,13 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 09:27:25 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 16:37:17 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/06 16:42:26 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	rotate_a(t_stack **stack_a)
+void	rotate_a(t_stack **stack_a, int print)
 {
 	t_stack *first;
 	t_stack *last;
@@ -26,10 +26,11 @@ void	rotate_a(t_stack **stack_a)
 	*stack_a = first->next;
 	first->next = NULL;
 	last->next = first;
-	ft_putstr("ra\n");
+	if (print)
+		ft_putstr("ra\n");
 }
 
-void	rotate_b(t_stack **stack_b)
+void	rotate_b(t_stack **stack_b, int print)
 {
 	t_stack *first;
 	t_stack *last;
@@ -43,11 +44,12 @@ void	rotate_b(t_stack **stack_b)
 	*stack_b = first->next;
 	first->next = NULL;
 	last->next = first;
-	ft_putstr("rb\n");
+	if (print)
+		ft_putstr("rb\n");
 }
 
 void	rotate_a_and_b(t_stack **stack_a, t_stack **stack_b)
 {
-	rotate_a(stack_a);
-	rotate_b(stack_b);
+	rotate_a(stack_a, 0);
+	rotate_b(stack_b, 0);
 }
