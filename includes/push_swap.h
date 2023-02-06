@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 16:11:43 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/06 16:36:51 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,9 @@ void	reverse_rotate_b(t_stack **stack_b);
 void	reverse_rotate_a_and_b(t_stack **stack_a, t_stack **stack_b);
 
 //--------------- rotate.c ---------------//
+void	rotate_a(t_stack **stack_a);
+void	rotate_b(t_stack **stack_b);
+void	rotate_a_and_b(t_stack **stack_a, t_stack **stack_b);
 
 //--------------- swap.c ---------------//
 void	swap_a(t_stack *stack_a);
