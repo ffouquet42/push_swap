@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 16:57:18 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/06 18:09:53 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_algorithm_choice(t_stack *stack_a, int nb)
 	else if (nb == 4)
 		printf("nb : 4\n");
 	else if (nb == 5)
-		printf("nb : 5\n"); // to do
+		ft_sort_5_values(stack_a, stack_b);
 	else if (nb >= 6)
 		printf("nb : 6+\n");
 	ft_display_stack(stack_a); // dev
@@ -97,6 +97,18 @@ void	ft_display_stack(t_stack *stack_a)
 	{
         printf(" A : %i |  B : %i\n", stack_a->value, 0);
         stack_a = stack_a->next;
+    }
+	printf("-----------------------------------\n");
+}
+
+void	ft_display_stack_2(t_stack *stack_a, t_stack *stack_b)
+{
+	printf("-----------------------------------\n");
+   	while (stack_a || stack_b)
+	{
+        printf(" A : %i |  B : %i\n", stack_a->value, stack_b->value);
+        stack_a = stack_a->next;
+        stack_b = stack_b->next;
     }
 	printf("-----------------------------------\n");
 }

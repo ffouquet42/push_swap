@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 16:43:45 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/06 18:09:40 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int		main(int argc, char **argv);
 //--------------- INSTRUCTIONS ---------------//
 
 //--------------- push.c ---------------//
-void	push_a(t_stack *stack_a, t_stack *stack_b);
-void	push_b(t_stack *stack_a, t_stack *stack_b);
+void	push_a(t_stack **stack_a, t_stack **stack_b, int print);
+void	push_b(t_stack **stack_a, t_stack **stack_b, int print);
 
 //--------------- reverse.c ---------------//
 void	reverse_rotate_a(t_stack **stack_a, int print);
@@ -89,5 +89,15 @@ int		ft_stack_size(t_stack *stack);
 
 //--------------- 3_values.c ---------------//
 void	ft_sort_3_values(t_stack **stack_a);
+
+//--------------- 5_values.c ---------------//
+void	ft_sort_5_values(t_stack **stack_a, t_stack **stack_b);
+t_stack	*ft_put_aside_2_lower(t_stack *stack_a, t_stack *stack_b);
+int		ft_find_lower_position(t_stack *stack);
+
+
+// dev
+void	ft_display_stack(t_stack *stack_a);
+void	ft_display_stack_2(t_stack *stack_a, t_stack *stack_b);
 
 #endif
