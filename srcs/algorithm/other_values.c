@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:36:54 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 19:49:47 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/07 19:59:24 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,5 @@ void	ft_sort_other_values(t_stack **stack_a, t_stack **stack_b)
 		size = ft_push_b_lower(stack_a, stack_b, average);
 	}
 	ft_sort_3_values(stack_a);
-	
-	// ft_display_stack_2(*stack_a, *stack_b);
 	
 }
