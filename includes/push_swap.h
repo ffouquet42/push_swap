@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 19:16:35 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/07 19:22:42 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ void	ft_put_lower_top_of_stack(t_stack **stack_a);
 
 //--------------- other_values.c ---------------//
 void	ft_sort_other_values(t_stack **stack_a, t_stack **stack_b);
+int		ft_push_b_lower(t_stack **stack_a, t_stack **stack_b, int average);
 
 //--------------- average.c ---------------//
 int		ft_find_average(int *tab, int size, int i);

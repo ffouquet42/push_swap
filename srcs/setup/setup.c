@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 15:19:33 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/07 19:47:35 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,9 +104,13 @@ void	ft_display_stack(t_stack *stack_a)
 void	ft_display_stack_2(t_stack *stack_a, t_stack *stack_b)
 {
 	printf("-----------------------------------\n");
-   	while (stack_a)
+   	while (stack_a || stack_b)
 	{
-		printf(" A : %i ", stack_a->value);
+		if (stack_a)
+		{
+			printf(" A : %i ", stack_a->value);
+			stack_a = stack_a->next;
+		}
 		if (stack_b)
 		{
 			printf("|  B : %i\n", stack_b->value);
@@ -114,8 +118,6 @@ void	ft_display_stack_2(t_stack *stack_a, t_stack *stack_b)
 		}
 		else
         	printf("\n");
-        stack_a = stack_a->next;
     }
-	// printf(" A 2 : %i ", stack_a->value);
 	printf("-----------------------------------\n");
 }
