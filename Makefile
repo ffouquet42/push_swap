@@ -10,6 +10,8 @@ SRCS		=	srcs/push_swap.c								\
 				srcs/instructions/swap.c						\
 				srcs/algorithm/3_values.c						\
 				srcs/algorithm/5_values.c						\
+				srcs/algorithm/other_values.c					\
+				srcs/algorithm/average.c						\
 
 OBJS		=	$(SRCS:.c=.o)
 

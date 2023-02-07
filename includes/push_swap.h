@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 14:22:52 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/07 16:13:59 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 # include <stdio.h>
 # include <limits.h>
 # include <stdlib.h>
-
-//--------------- VARIABLES ---------------//
 
 //--------------- STRUCTURES ---------------//
 
@@ -94,6 +92,15 @@ void	ft_sort_3_values(t_stack **stack_a);
 void	ft_sort_5_values(t_stack **stack_a, t_stack **stack_b);
 int		ft_find_lower_position(t_stack *stack);
 void	ft_put_lower_top_of_stack(t_stack **stack_a);
+
+//--------------- other_values.c ---------------//
+void	ft_sort_other_values(t_stack **stack_a, t_stack **stack_b);
+
+//--------------- average.c ---------------//
+int		ft_find_average(t_stack *stack, int size);
+int		*ft_sort_tab(int *tab, int size);
+int		*ft_tab(t_stack **stack);
+
 
 // dev
 void	ft_display_stack(t_stack *stack_a);
