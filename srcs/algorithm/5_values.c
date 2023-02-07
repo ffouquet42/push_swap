@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 17:32:24 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 14:00:19 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/07 14:07:50 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,18 @@ int	ft_find_lower_position(t_stack *stack)
 void	ft_put_lower_top_of_stack(t_stack **stack_a)
 {
 	int	pos;
-	int i;
 
 	pos = ft_find_lower_position(*stack_a);
-	i = 0;
-	while (i < pos)
+	if (pos <= 2)
 	{
-		rotate_a(stack_a, 1);
-		i++;
+		while (ft_find_lower_position(*stack_a) != 0)
+			rotate_a(stack_a, 1);
 	}
-	// voir si pos est vers la fin ou le debut pour rotate ou reverse rotate
+	else
+	{
+		while (ft_find_lower_position(*stack_a) != 0)
+			reverse_rotate_a(stack_a, 1);
+	}
 }
 
 t_stack	*ft_put_aside_2_lower(t_stack **stack_a, t_stack **stack_b)
