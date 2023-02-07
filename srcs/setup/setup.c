@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 18:09:53 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/07 12:51:17 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ void	ft_algorithm_choice(t_stack *stack_a, int nb)
 	else if (nb == 4)
 		printf("nb : 4\n");
 	else if (nb == 5)
-		ft_sort_5_values(stack_a, stack_b);
+		ft_sort_5_values(&stack_a, &stack_b);
 	else if (nb >= 6)
 		printf("nb : 6+\n");
-	ft_display_stack(stack_a); // dev
+	// ft_display_stack(stack_a); // dev
 }
 
 void	ft_setup(int argc, char **argv)
@@ -104,11 +104,18 @@ void	ft_display_stack(t_stack *stack_a)
 void	ft_display_stack_2(t_stack *stack_a, t_stack *stack_b)
 {
 	printf("-----------------------------------\n");
-   	while (stack_a || stack_b)
+   	while (stack_a)
 	{
-        printf(" A : %i |  B : %i\n", stack_a->value, stack_b->value);
+		printf(" A : %i ", stack_a->value);
+		if (stack_b)
+		{
+			printf("|  B : %i\n", stack_b->value);
+			stack_b = stack_b->next;
+		}
+		else
+        	printf("\n");
         stack_a = stack_a->next;
-        stack_b = stack_b->next;
     }
+	// printf(" A 2 : %i ", stack_a->value);
 	printf("-----------------------------------\n");
 }
