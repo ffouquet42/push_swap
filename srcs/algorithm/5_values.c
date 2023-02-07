@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 17:32:24 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 14:07:50 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/07 14:24:34 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,23 +51,13 @@ void	ft_put_lower_top_of_stack(t_stack **stack_a)
 	}
 }
 
-t_stack	*ft_put_aside_2_lower(t_stack **stack_a, t_stack **stack_b)
-{
-	
-	ft_put_lower_top_of_stack(stack_a);
-	push_b(stack_a, stack_b, 1);
-	ft_put_lower_top_of_stack(stack_a);
-	push_b(stack_a, stack_b, 1);
-	return (*stack_a);
-}
-
 void	ft_sort_5_values(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack	*stack_a_3_highest;
-
-	stack_a_3_highest = ft_put_aside_2_lower(stack_a, stack_b);
-	ft_display_stack_2(*stack_a, *stack_b); // dev
-
-	// ft_sort_3_values les 3 valeurs restantes
-	// push A les deux valeurs de B
+	ft_put_lower_top_of_stack(stack_a);
+	push_b(stack_a, stack_b, 1);
+	ft_put_lower_top_of_stack(stack_a);
+	push_b(stack_a, stack_b, 1);
+	ft_sort_3_values(stack_a);
+	push_a(stack_a, stack_b, 1);
+	push_a(stack_a, stack_b, 1);
 }
