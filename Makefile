@@ -37,4 +37,8 @@ fclean:		clean
 
 re:			fclean $(NAME)
 
+test:				$(NAME)	
+					$(eval ARG = $(shell shuf -i 0-5000 -n 1000))
+					./push_swap $(ARG)
+
 .PHONY:		all clean fclean re
