@@ -20,7 +20,7 @@ CC			=	gcc
 RM			=	rm -f
 
 #CFLAGS		=	-Wall -Wextra -Werror
-CFLAGS		=	
+CFLAGS		=	-g
 
 NAME		=	push_swap
 
