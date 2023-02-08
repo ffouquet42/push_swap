@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 19:47:35 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/08 13:57:48 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ int	ft_is_sorted(t_stack *stack)
 
 void	ft_algorithm_choice(t_stack *stack_a, int nb)
 {
-	t_stack *stack_b;
-	
+	t_stack	*stack_b;
+
 	stack_b = NULL;
 	ft_display_stack_2(stack_a, stack_b); // dev
 	if (nb == 2)
@@ -71,8 +71,8 @@ void	ft_algorithm_choice(t_stack *stack_a, int nb)
 
 void	ft_setup(int argc, char **argv)
 {
-	t_stack *stack_a;
-	t_stack *stack_tmp;
+	t_stack	*stack_a;
+	t_stack	*stack_tmp;
 	int		i;
 
 	stack_a = NULL;

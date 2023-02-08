@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 09:27:28 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 16:41:05 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/08 14:39:49 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	reverse_rotate_a(t_stack **stack_a, int print)
 {
-	t_stack *sec_last;
-	t_stack *last;
+	t_stack	*sec_last;
+	t_stack	*last;
 
 	sec_last = NULL;
 	last = *stack_a;
@@ -35,8 +35,8 @@ void	reverse_rotate_a(t_stack **stack_a, int print)
 
 void	reverse_rotate_b(t_stack **stack_b, int print)
 {
-	t_stack *sec_last;
-	t_stack *last;
+	t_stack	*sec_last;
+	t_stack	*last;
 
 	sec_last = NULL;
 	last = *stack_b;

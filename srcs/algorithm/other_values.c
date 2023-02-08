@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:36:54 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/08 13:38:57 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/08 14:42:35 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_push_b_lower(t_stack **stack_a, t_stack **stack_b, int average)
 {
-	int size;
+	int	size;
 
 	size = ft_stack_size(*stack_a);
 	if ((*stack_a)->value < average)
@@ -55,10 +55,7 @@ void	ft_push_a_highest(t_stack **stack_a, t_stack **stack_b)
 	int	size;
 
 	pos = ft_find_highest_position(*stack_b);
-	printf("pos : %i\n", pos); // dev
 	size = ft_stack_size(*stack_b);
-	printf("size : %i\n", size); // dev
-	
 	if (pos <= (size / 2))
 	{
 		while (pos >= 1)

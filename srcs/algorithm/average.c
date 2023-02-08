@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:50:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 19:17:58 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/08 14:41:55 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	*ft_sort_tab(int *tab, int size)
 {
 	int	i;
 	int	j;
-	int tmp;
+	int	tmp;
 
 	i = 0;
 	while (i < size)
@@ -61,8 +61,8 @@ int	*ft_sort_tab(int *tab, int size)
 
 int	ft_find_average(int *tab, int size, int i)
 {
-	int average;
-	
+	int	average;
+
 	if (size >= 0 && size <= 100)
 	{
 		while (i <= (size / 5))

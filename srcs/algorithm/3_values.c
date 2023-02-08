@@ -6,34 +6,34 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:21:23 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/06 16:44:36 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/08 14:41:21 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void ft_sort_3_values(t_stack **stack_a)
+void	ft_sort_3_values(t_stack **stack_a)
 {
-	t_stack *mid;
+	t_stack	*mid;
 
 	mid = (*stack_a)->next;
 	if ((*stack_a)->value < mid->value && mid->value > mid->next->value
-		&& mid->next->value > (*stack_a)->value) // #1 - 1 3 2
+		&& mid->next->value > (*stack_a)->value)
 	{
 		reverse_rotate_a(stack_a, 1);
 		return (swap_a((*stack_a), 1));
 	}
 	if ((*stack_a)->value > mid->value && mid->value < mid->next->value
-		&& mid->next->value > (*stack_a)->value) // #2 - 2 1 3
+		&& mid->next->value > (*stack_a)->value)
 		return (swap_a((*stack_a), 1));
 	if ((*stack_a)->value < mid->value && mid->value > mid->next->value
-		&& mid->next->value < (*stack_a)->value) // #3 - 2 3 1
+		&& mid->next->value < (*stack_a)->value)
 		return (reverse_rotate_a(stack_a, 1));
 	if ((*stack_a)->value > mid->value && mid->value < mid->next->value
-		&& mid->next->value < (*stack_a)->value) // #4 - 3 1 2
+		&& mid->next->value < (*stack_a)->value)
 		return (rotate_a(stack_a, 1));
 	if ((*stack_a)->value > mid->value && mid->value > mid->next->value
-		&& mid->next->value < (*stack_a)->value) // #5 - 3 2 1
+		&& mid->next->value < (*stack_a)->value)
 	{
 		swap_a((*stack_a), 1);
 		return (reverse_rotate_a(stack_a, 1));

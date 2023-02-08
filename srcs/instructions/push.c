@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 09:27:22 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 14:09:44 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/08 13:59:13 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	push_a(t_stack **stack_a, t_stack **stack_b, int print)
 {
-	t_stack *tmp_stack;
+	t_stack	*tmp_stack;
 
 	if (*stack_b == NULL)
 		return ;
@@ -22,7 +22,7 @@ void	push_a(t_stack **stack_a, t_stack **stack_b, int print)
 	(*stack_b) = tmp_stack->next;
 	tmp_stack->next = NULL;
 	if (*stack_a == NULL)
-		(*stack_a) = tmp_stack;	
+		(*stack_a) = tmp_stack;
 	else
 	{
 		tmp_stack->next = (*stack_a);
@@ -34,7 +34,7 @@ void	push_a(t_stack **stack_a, t_stack **stack_b, int print)
 
 void	push_b(t_stack **stack_a, t_stack **stack_b, int print)
 {
-	t_stack *tmp_stack;
+	t_stack	*tmp_stack;
 
 	if (*stack_a == NULL)
 		return ;
@@ -42,7 +42,7 @@ void	push_b(t_stack **stack_a, t_stack **stack_b, int print)
 	(*stack_a) = tmp_stack->next;
 	tmp_stack->next = NULL;
 	if (*stack_b == NULL)
-		(*stack_b) = tmp_stack;	
+		(*stack_b) = tmp_stack;
 	else
 	{
 		tmp_stack->next = (*stack_b);

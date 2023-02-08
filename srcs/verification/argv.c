@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 02:31:50 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/03 06:57:06 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/08 13:55:33 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,9 @@ int	ft_check_argv(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		if (ft_check_only_digit(argv[i]) == 1 || ft_check_int_max_min(argv[i]) == 1 || ft_check_double(argc, argv, i) == 1)
+		if (ft_check_only_digit(argv[i]) == 1
+			|| ft_check_int_max_min(argv[i]) == 1
+			|| ft_check_double(argc, argv, i) == 1)
 			return (1);
 		i++;
 	}
