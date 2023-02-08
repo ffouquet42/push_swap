@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:36:54 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/07 19:59:24 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/08 13:38:57 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,57 @@ int	ft_push_b_lower(t_stack **stack_a, t_stack **stack_b, int average)
 	return (size);
 }
 
+int	ft_find_highest_position(t_stack *stack)
+{
+	int	pos;
+	int	i;
+	int	highest_position;
+
+	pos = 0;
+	i = 0;
+	highest_position = stack->value;
+	while (stack)
+	{
+		if (stack->value > highest_position)
+		{
+			pos = i;
+			highest_position = stack->value;
+		}
+		i++;
+		stack = stack->next;
+	}
+	return (pos);
+}
+
+void	ft_push_a_highest(t_stack **stack_a, t_stack **stack_b)
+{
+	int	pos;
+	int	size;
+
+	pos = ft_find_highest_position(*stack_b);
+	printf("pos : %i\n", pos); // dev
+	size = ft_stack_size(*stack_b);
+	printf("size : %i\n", size); // dev
+	
+	if (pos <= (size / 2))
+	{
+		while (pos >= 1)
+		{
+			rotate_b(stack_b, 1);
+			pos--;
+		}
+	}
+	else
+	{
+		while (pos < size)
+		{
+			reverse_rotate_b(stack_b, 1);
+			pos++;
+		}
+	}
+	push_a(stack_a, stack_b, 1);
+}
+
 void	ft_sort_other_values(t_stack **stack_a, t_stack **stack_b)
 {
 	int	size;
@@ -40,5 +91,6 @@ void	ft_sort_other_values(t_stack **stack_a, t_stack **stack_b)
 		size = ft_push_b_lower(stack_a, stack_b, average);
 	}
 	ft_sort_3_values(stack_a);
-	
+	while (*stack_b)
+		ft_push_a_highest(stack_a, stack_b);
 }
