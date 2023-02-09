@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:16:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/08 13:57:48 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/09 15:16:45 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,23 +50,25 @@ int	ft_is_sorted(t_stack *stack)
 	return (1);
 }
 
-void	ft_algorithm_choice(t_stack *stack_a, int nb)
+t_stack	*ft_algorithm_choice(t_stack *stack_a, int nb)
 {
 	t_stack	*stack_b;
+	t_stack	*stack_tmp;
 
+	stack_tmp = stack_a;
 	stack_b = NULL;
-	ft_display_stack_2(stack_a, stack_b); // dev
 	if (nb == 2)
-		swap_a(stack_a, 1);
+		swap_a(stack_tmp, 1);
 	else if (nb == 3)
-		ft_sort_3_values(&stack_a);
+		ft_sort_3_values(&stack_tmp);
 	else if (nb == 4)
-		ft_sort_other_values(&stack_a, &stack_b);
+		ft_sort_other_values(&stack_tmp, &stack_b);
 	else if (nb == 5)
-		ft_sort_5_values(&stack_a, &stack_b);
+		ft_sort_5_values(&stack_tmp, &stack_b);
 	else if (nb >= 6)
-		ft_sort_other_values(&stack_a, &stack_b);
-	ft_display_stack_2(stack_a, stack_b); // dev
+		ft_sort_other_values(&stack_tmp, &stack_b);
+	ft_clear_stack(stack_b);
+	return (stack_tmp);
 }
 
 void	ft_setup(int argc, char **argv)
@@ -85,39 +87,6 @@ void	ft_setup(int argc, char **argv)
 		i++;
 	}
 	if (ft_is_sorted(stack_a) == 0)
-		ft_algorithm_choice(stack_a, argc - 1);
-}
-
-
-// dev
-void	ft_display_stack(t_stack *stack_a)
-{
-	printf("-----------------------------------\n");
-   	while (stack_a)
-	{
-        printf(" A : %i |  B : %i\n", stack_a->value, 0);
-        stack_a = stack_a->next;
-    }
-	printf("-----------------------------------\n");
-}
-
-void	ft_display_stack_2(t_stack *stack_a, t_stack *stack_b)
-{
-	printf("-----------------------------------\n");
-   	while (stack_a || stack_b)
-	{
-		if (stack_a)
-		{
-			printf(" A : %i ", stack_a->value);
-			stack_a = stack_a->next;
-		}
-		if (stack_b)
-		{
-			printf("|  B : %i\n", stack_b->value);
-			stack_b = stack_b->next;
-		}
-		else
-        	printf("\n");
-    }
-	printf("-----------------------------------\n");
+		stack_a = ft_algorithm_choice(stack_a, argc - 1);
+	ft_clear_stack(stack_a);
 }

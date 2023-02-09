@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 01:45:43 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/08 13:56:15 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/09 15:09:34 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,19 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (res * pos);
+}
+
+void	ft_clear_stack(t_stack *stack)
+{
+	t_stack	*stack_cpy;
+	
+	if (!stack)
+		return ;
+	stack_cpy = stack;
+	while (stack_cpy)
+	{
+		stack_cpy = stack_cpy->next;
+		free(stack);
+		stack = stack_cpy;
+	}
 }
