@@ -19,8 +19,7 @@ CC			=	gcc
 
 RM			=	rm -f
 
-#CFLAGS		=	-Wall -Wextra -Werror
-CFLAGS		=	-g
+CFLAGS		=	-Wall -Wextra -Werror
 
 NAME		=	push_swap
 
@@ -37,8 +36,10 @@ fclean:		clean
 
 re:			fclean $(NAME)
 
-test:				$(NAME)	
-					$(eval ARG = $(shell shuf -i 0-5000 -n 500))
-					./push_swap $(ARG)
+test:		$(NAME)	
+			$(eval ARG = $(shell shuf -i 0-5000 -n 100))
+			./push_swap $(ARG) | ./checker_linux $(ARG)
+			@echo -n "Instructions: "
+			@./push_swap $(ARG) | wc -l
 
 .PHONY:		all clean fclean re

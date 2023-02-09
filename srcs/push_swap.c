@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:33 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/04 13:54:05 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/09 15:45:10 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (1);
 	if (ft_check_argv(argc, argv) == 1)
-		return (ft_putstr("Error\n"), 1);
+	{
+		write(2, "Error\n", 6);
+		return (1);
+	}
 	else
 		ft_setup(argc, argv);
 	return (0);
