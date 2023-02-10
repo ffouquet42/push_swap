@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 01:45:43 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/09 15:09:34 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/10 10:43:04 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_atoi(char *str)
 void	ft_clear_stack(t_stack *stack)
 {
 	t_stack	*stack_cpy;
-	
+
 	if (!stack)
 		return ;
 	stack_cpy = stack;
