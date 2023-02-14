@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 00:30:33 by fllanet           #+#    #+#             */
-/*   Updated: 2023/02/11 20:59:42 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/02/14 21:18:18 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,3 @@ int	main(int argc, char **argv)
 		ft_setup(argc, argv);
 	return (0);
 }
-
-// ARG="4 67 3 87 23"; ./push_swap $ARG => Error
