@@ -4,7 +4,7 @@
 
 ## Grade - ?/100
 
-Mandatory Part : 100/100  
+Mandatory Part : ?/100  
 
 ## Description
 
