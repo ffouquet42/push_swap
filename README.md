@@ -42,7 +42,7 @@ This project contains the necessary so_long code to launch a 2D game.
 
 ## How to use it
 
-Create the executables : `so_long`.
+Create the executables : `push_swap`.
 ```javascript
 make
 ```
