@@ -1,4 +1,4 @@
-# so_long
+# push_swap
 
 *Version: 2*
 
