@@ -1,6 +1,6 @@
 # push_swap
 
-*Version: 2*
+*Version: 6*
 
 ## Grade - ?/100
 
