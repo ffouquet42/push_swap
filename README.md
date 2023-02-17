@@ -14,7 +14,7 @@ This project is a very small 2D game. Its purpose is to make us work with textur
 
 It was realized without the bonuses. All the files are normed following the standard of 42.
 
-This project contains the necessary so_long code to launch a 2D game.
+This project contains the necessary push_swap code to sort values.
 
 * img
 
