@@ -2,13 +2,13 @@
 
 *Version: 6*
 
-## Grade - ?/100
+## Grade - 96/100
 
-Mandatory Part : ?/100  
+Mandatory Part : 96/100  
 
 ## Description
 
-This project is a very small 2D game. Its purpose is to make us work with textures, sprites, and some other very basic gameplay elements.
+This project will make us sort data on a stack, with a limited set of instructions, using the lowest possible number of actions.
 
 ## What's in this project
 
@@ -16,29 +16,22 @@ It was realized without the bonuses. All the files are normed following the stan
 
 This project contains the necessary push_swap code to sort values.
 
-* img
-
-`*.xpm` 
-
 * includes
 
 `*.h` 
 
-* maps
-
-`*.ber` 
-
-* mlx_linux
-
-`Minilibx of 42` 
-
 * srcs
 
-`*.c`  
+`*.c` 
+
+* checker_linux
+
+`Checker of 42`   
 
 * others
 
 `Makefile`  
+`Subjects en + fr`  
 
 ## How to use it
 
@@ -46,9 +39,9 @@ Create the executables : `push_swap`.
 ```javascript
 make
 ```
-Run the game.  
+Run the program.  
 ```javascript
-./so_long maps/map_01.ber
+./push_swap [VALUE_1, VALUE_2, ...]
 ```
 
 ## Testing
