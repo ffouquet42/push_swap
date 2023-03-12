@@ -31,7 +31,7 @@ This project contains the necessary push_swap code to sort values.
 * others
 
 `Makefile`  
-`Subjects en + fr`  
+`Subjects : en + fr`  
 
 ## How to use it
 
