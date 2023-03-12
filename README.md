@@ -41,7 +41,7 @@ make
 ```
 Run the program.  
 ```javascript
-./push_swap [VALUE_1, VALUE_2, ...]
+./push_swap VALUE_1 VALUE_2 ...
 ```
 
 ## Testing
